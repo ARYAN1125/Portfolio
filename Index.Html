@@ -1,460 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio - Aryan Verma</title>
 
-    <!-- bootstrap css cdn link  -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aryan Verma | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <!-- custom css file -->
-    <link rel="stylesheet" href="css/style.css" />
+    body {
+      position: relative;
+      z-index: 0;
+      background: transparent;
+    }
 
-    <!-- google font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    #vanta-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  </style>
+</head>
 
-    <!-- bootstrap icon cdn link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
-    />
+<body class="text-white">
+  <div id="vanta-overlay"></div>
 
-    <!-- for adding animation to website we have use AOS library 
-    AOS Library css file cdn link -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- jquery cdn link  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  </head>
-  <body>
-    <!-- navbar starts -->
-    <nav
-      id="navbar-top"
-      class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
-    >
-      <div class="container-fluid px-5">
-        <a class="navbar-brand fw-bold fs-2" href="#" style="color: #2a2361"
-          >Portfolio</a
-        >
-        <button
-          class="nav-menu d-md-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <i class="bi bi-menu-button-fill"></i>
-        </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#service">Service</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#testimonial">Testimonials</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#blog">Blog</a>
-            </li>
-          </ul>
-        </div>
-        <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block">Contact</button>
+  <!-- Hero Section -->
+  <section id="hero" class="flex items-center justify-center h-screen">
+    <div class="text-center px-6 z-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Aryan Verma</h1>
+      <p class="text-xl md:text-2xl mb-4">Web Developer | Java Programmer | ML Enthusiast</p>
+      <a href="/Aryan_Verma_Resume.pdf" target="_blank" class="bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded-xl mb-4 inline-block">
+        View Resume
+      </a>
+      <div>
+        <a href="#projects" class="bg-indigo-500 hover:bg-indigo-700 text-white py-2 px-4 rounded-xl transition">
+          View My Work
+        </a>
       </div>
-    </nav>
-    <!-- navbar ends here -->
+    </div>
+  </section>
 
-    <!-- home section starts  -->
-    <section class="home pt-5 pb-5" id="home">
-      <div class="row justify-content-evenly align-middle">
-        <!-- here data-aos is used for adding aos animation  -->
-        <div class="col-10 col-md-6 text-center text-md-start" data-aos="slide-right">
-          <h2 style="color: #a840df">
-            Hello! I Am <br /><span class="c-orange">Aryan Verma</span>
-          </h2>
-          <p class="text-muted">
-            Here's a version of that line suitable for a fresher:
-            "I am an aspiring web developer with foundational skills 
-            in creating fully responsive websites and backend development, 
-            eager to apply and grow my expertise in a professional setting."
-            
-          </p>
-          <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-            Hire Me
-          </button>
-          <a href="" class="link ms-4 d-none">See My Work</a>
-        </div>
-        
-      </div>
-    </section>
-    <!-- home section ends here -->
+  <!-- About Me -->
+  <section class="py-20 px-6" id="about">
+    <div class="max-w-5xl mx-auto z-10 relative text-center">
+      <h2 class="text-4xl font-bold mb-6">About Me</h2>
+      <p class="text-lg leading-relaxed">
+        I am currently pursuing B.Tech in Computer Science from NIET Greater Noida. Passionate about creating modern web applications, I have developed various projects including an E-commerce site, English Dictionary, and House Price Prediction tool.
+      </p>
+    </div>
+  </section>
 
-    <!-- expertise section starts -->
-    <section class="expertise mt-5" id="service">
-      <div class="heading text-center">
-        <small>My Expertise</small>
-        <h3>
-          Provide Wide Range of <br />
-          Digital Services
-        </h3>
+  <!-- Skills -->
+  <section class="py-20 px-6" id="skills">
+    <div class="max-w-5xl mx-auto z-10 relative text-center">
+      <h2 class="text-4xl font-bold mb-6">Technical Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <span class="p-4 rounded-xl border border-indigo-400">HTML/CSS</span>
+        <span class="p-4 rounded-xl border border-indigo-400">JavaScript</span>
+        <span class="p-4 rounded-xl border border-indigo-400">Python</span>
+        <span class="p-4 rounded-xl border border-indigo-400">Java</span>
+        <span class="p-4 rounded-xl border border-indigo-400">SQL</span>
+        <span class="p-4 rounded-xl border border-indigo-400">Flask</span>
+        <span class="p-4 rounded-xl border border-indigo-400">FastAPI</span>
+        <span class="p-4 rounded-xl border border-indigo-400">GitHub</span>
       </div>
-      <div class="row justify-content-evenly mt-5">
-        <div class="col-10 col-md-4" data-aos="fade-up">
-          <div class="service-card">
-            <div class="img">
-              <img
-                src="images/service-icon1.png"
-                class="w-25 img-fluid img"
-                alt=""
-              />
-            </div>
-            <div class="content mt-3">
-              <h4>Web Design</h4>
-              <p class="text-muted">
-                Crafting visually engaging and user-friendly websites that seamlessly blend functionality with aesthetic appeal.
-              </p>
-              <a href="" class="link">Read More</a>
-            </div>
-          </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="py-20 px-6" id="projects">
+    <div class="max-w-5xl mx-auto z-10 relative text-center">
+      <h2 class="text-4xl font-bold mb-6">Projects</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-2xl font-semibold">House Price Prediction</h3>
+          <p>Built using Flask & Machine Learning to predict property prices based on input features.</p>
+          <a class="text-indigo-400" href="https://housez.netlify.app/" target="_blank">View Project</a>
         </div>
-        <div class="col-md-4 col-10" data-aos="fade-up">
-          <div class="service-card">
-            <div class="img">
-              <img
-                src="images/service-icon2.png"
-                class="w-25 img-fluid img"
-                alt=""
-              />
-            </div>
-            <div class="content mt-3">
-              <h4>Web Development</h4>
-              <p class="text-muted">
-                Web development is the process of building and maintaining websites, encompassing both 
-                frontend (visual design and user interaction) and 
-                backend (server, database, and application logic) components.
-              </p>
-              <a href="" class="link">Read More</a>
-            </div>
-          </div>
+        <div>
+          <h3 class="text-2xl font-semibold">E-Commerce Website</h3>
+          <p>Responsive website with product listings, cart system, and authentication.</p>
+          <a class="text-indigo-400" href=" https://mfashionecom.netlify.app/" target="_blank">View Project</a>
         </div>
-        <div class="col-md-4 col-10" data-aos="fade-up">
-          <div class="service-card">
-            <div class="img">
-              <img
-                src="images/service-icon3.png"
-                class="w-25 img-fluid img"
-                alt=""
-              />
-            </div>
-            <div class="content mt-3">
-              <h4>Debugging</h4>
-              <p class="text-muted">
-                Debugging is the process of identifying, isolating, and fixing errors or bugs in a program or system.
-              </p>
-              <a href="" class="link">Read More</a>
-            </div>
-          </div>
+        <div>
+          <h3 class="text-2xl font-semibold">English Dictionary</h3>
+          <p>Web application that returns word definitions and pronunciation using API.</p>
+          <a class="text-indigo-400" href="https://englishdictionary1125.netlify.app/" target="_blank">View Project</a>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold">Currency Converter</h3>
+          <p>Converts currencies in real-time with intuitive user interface.</p>
+          <a class="text-indigo-400" href="https://currency-convertorabc.netlify.app/" target="_blank">View Project</a>
         </div>
       </div>
-    </section>
-    <!-- expertise section ends here -->
+    </div>
+  </section>
 
-    <!-- skill section starts -->
-    <section class="skill mt-5 py-5" id="about">
-      <div class="row justify-content-evenly">
-        <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
-          <div class="row justify-content-evenly">
-            <div class="col-10 col-md-6">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress html-css">
-                  <span class="progress-value html-progress">0%</span>
-                </div>
-                <br />
-                <span class="text">HTML & CSS</span>
-              </div>
-            </div>
-            <div class="col-10 col-md-6 mt-4 mt-md-0">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress javascript">
-                  <span class="progress-value javascript-progress">0%</span>
-                </div>
-                <br />
-                <span class="text">JavaScript</span>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-evenly mt-4">
-            <div class="col-10 col-md-6">
-              <div class="progress-card ms-3 ms-md-0">
-                <div class="circular-progress php">
-                  <span class="progress-value php-progress">0%</span>
-                </div>
-                <br />
-                <span class="text">PHP</span>
-              </div>
-            </div>
-            <div class="col-10 col-md-6 mt-4 mt-md-0">
-              <div class="progress-card ms-3  ms-md-0">
-                <div class="circular-progress reactjs">
-                  <span class="progress-value reactjs-progress">0%</span>
-                </div>
-                <br>
-                <span class="text">ReactJS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
-          <div class="heading mt-5 mt-md-3">
-            <h3>My Skills</h3>
-            <ol>
-              <li>HTML, CSS, and JavaScript: Core technologies for creating web structure, styling, and interactivity.</li>
-              <li>Responsive Design: Ability to create websites that work well on all devices (mobile, tablet, desktop).</li>
-              <li>Version Control (Git): Managing code versions, collaborating with teams, and tracking changes.</li>
-              <li>Problem-Solving & Debugging: Identifying and fixing issues in code using tools like browser dev tools or debuggers.</li>
-              <li>Basic Knowledge of Back-end: Understanding of server-side technologies (e.g., databases, APIs) to connect front-end with back-end logic.</li>
-            </ol>
-            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              <!-- here download attribute is used for adding download functionality to button  -->
-              <a href="Aryan Resume2024.pdf" download="SampleCV"
-                style="text-decoration: none;color: #000000;"
-                >Download CV</a>
-            </button>
-          </div>
-        </div>
+  <!-- Contact -->
+  <section class="py-20 px-6" id="contact">
+    <div class="max-w-5xl mx-auto text-center z-10 relative">
+      <h2 class="text-4xl font-bold mb-6">Contact</h2>
+      <p>Email: <a class="text-indigo-400" href="mailto:aryanav1125@gmail.com">aryanav1125@gmail.com</a></p>
+      <p>Phone: +91 9125967269</p>
+      <div class="mt-4 flex justify-center gap-4">
+        <a href="https://github.com/ARYAN1125" target="_blank" class="text-2xl"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/aryan-verma-98977125a" target="_blank" class="text-2xl"><i class="fab fa-linkedin"></i></a>
       </div>
-    </section>
-    <!-- skill section end here -->
+    </div>
+  </section>
 
-    <!-- portfolio section starts here -->
-    <section class="portfolio" id="portfolio">
-      <div class="heading text-center pt-5">
-        <small>Creative Work</small>
-        <h3>Check My Portfolio</h3>
-      </div>
+  <script>
+    VANTA.NET({
+      el: "#vanta-overlay",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x6c63ff,
+      backgroundColor: 0x111827
+    });
+  </script>
+</body>
 
-      <div id="myBtnContainer" class="text-center mt-4">
-        <!-- here we will create custom attribute using data- for filtering -->
-        <button class="filter-item" data-filter="all">All</button>
-        <button class="filter-item" data-filter="game">Game</button>
-        <button class="filter-item" data-filter="webapp">Web App</button>
-        <button class="filter-item" data-filter="website">Website</button>
-        <button class="filter-item" data-filter="brand">Brand</button>
-      </div>
-      <section class="portfolio py-5">
-        <div class="container">
-          <div class="row justify-content-evenly">
-            <!-- First Card: House Price Prediction -->
-            <div class="col-md-4 col-10 mt-3">
-              <div class="card">
-                <img src="images/House Price Prediction.png" class="card-img-top" alt="House Price Prediction" />
-                <div class="card-body text-center">
-                  <h4 class="card-title">House Price Prediction</h4>
-                  <span class="badge bg-secondary badge-pill">Python</span>
-                  <span class="badge bg-secondary badge-pill">HTML&CSS</span>
-                  <span class="badge bg-secondary badge-pill">JavaScript</span>
-                  <span class="badge bg-secondary badge-pill mb-2">WebApp</span><br />
-                  <a href="https://housez.netlify.app/" class="read-more-btn link">View project</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Second Card: Converter App -->
-            <div class="col-md-4 col-10 mt-3">
-              <div class="card">
-                <img src="images/currency-convertor.png" class="card-img-top" alt="Converter App" />
-                <div class="card-body text-center">
-                  <h4 class="card-title">Converter App</h4>
-                  <span class="badge bg-secondary badge-pill">HTML&CSS</span>
-                  <span class="badge bg-secondary badge-pill">JavaScript</span>
-                  <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
-                  <a href="https://currency-convertorabc.netlify.app/" class="read-more-btn link">View project</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Third Card: Dictionary -->
-            <div class="col-md-4 col-10 mt-3">
-              <div class="card">
-                <img src="images/dictionary.png" class="card-img-top" alt="Dictionary App" />
-                <div class="card-body text-center">
-                  <h4 class="card-title">Dictionary</h4>
-                  <span class="badge bg-secondary badge-pill">HTML&CSS</span>
-                  <span class="badge bg-secondary badge-pill">JavaScript</span>
-                  <span class="badge bg-secondary badge-pill mb-2">WebApp</span><br />
-                  <a href="https://englishdictionary1125.netlify.app/" class="read-more-btn link">View Project</a>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Fourth Card: Calculator -->
-            <div class="col-md-4 col-10 mt-3">
-              <div class="card">
-                <img src="images/Calculator.png" class="card-img-top" alt="Calculator App" />
-                <div class="card-body text-center">
-                  <h4 class="card-title">Calculator</h4>
-                  <span class="badge bg-secondary badge-pill">HTML&CSS</span>
-                  <span class="badge bg-secondary badge-pill">JavaScript</span>
-                  <span class="badge bg-secondary badge-pill mb-2">WebApp</span><br />
-                  <a href="https://guileless-centaur-354950.netlify.app/" class="read-more-btn link">View Project</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-    <!-- portfolio section ends here -->
-    <!-- contact section starts -->
-    <section class="contact py-5" id="contact">
-      <div class="row justify-content-evenly mt-5">
-        <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
-          <div class="row justify-content-evenly">
-            <div class="col-1">
-              <i class="bi bi-geo-alt-fill"></i>
-            </div>
-            <div class="col-11">
-              <p>238, Pocket-I, Alpha 2, Greater Noida, Uttar Pradesh-201307</p>
-            </div>
-          </div>
-          <div class="row justify-content-evenly">
-            <div class="col-1">
-              <i class="bi bi-telephone-fill"></i>
-            </div>
-            <div class="col-11">
-              <p>+91 9125967269</p>
-            </div>
-          </div>
-
-            </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
-          <div class="contact-form">
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Name"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="email"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="E-mail"
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                type="text"
-                class="form-control"
-                id="exampleFormControlInput1"
-                placeholder="Mobile No."
-              />
-            </div>
-            <div class="mb-3">
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                placeholder="Message"
-                rows="5"
-              ></textarea>
-            </div>
-            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
-              Submit
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- contact section ends here -->
-
-      <!-- now we will make back to top button when user click on it it will be redirected to top page  -->
-    <button
-      type="button"
-      class="btn btn-floating btn-lg rounded-pill"
-      id="btn-back-to-top"
-    >
-      <i class="bi bi-arrow-up"></i>
-    </button>
-
-    <!-- footer section starts  -->
-    <footer class="text-center text-muted py-4">
-      <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
-      <div class="link-group mt-5" data-aos="fade-up">
-        <a href="#home">Home</a>
-        <div class="vr"></div>
-        <a href="#about">About</a>
-        <div class="vr"></div>
-        <a href="#service">Service</a>
-        <div class="vr"></div>
-        <a href="#portfolio">Portfolio</a>
-        <div class="vr"></div>
-        <a href="#blog">Blog</a>
-        <div class="vr"></div>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="social-links mt-5" data-aos="fade-up">
-        <button href="" class="rounded-pill dribble">
-          <i class="bi bi-dribbble"></i>
-        </button>
-        <button href="" class="rounded-pill whatsapp">
-          <i class="bi bi-whatsapp"></i>
-        </button>
-        <button href="" class="rounded-pill behance">
-          <i class="bi bi-behance"></i>
-        </button>
-      </div>
-      <hr class="text-muted my-4" />
-
-      <p>Copyright 2022 Portfolio | All Rights Reserved.</p>
-    </footer>
-    <!-- footer section ends here -->
-
-      <!-- bootstrap javascript cdn link  -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- AOS library javascript link  -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      // initializing AOS library
-      AOS.init({
-        duration: 1000,
-        offset: 50,
-      });
-    </script>
-    <!-- custom js file linking -->
-    <script src="js/script.js"></script>
-    
-  </body>
 </html>
