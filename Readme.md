@@ -1,23 +1,24 @@
-# Aryan's Portfolio Website
+# Aryan Verma | Portfolio
 
-Welcome to my personal portfolio website! This website showcases my projects, skills, and contact information. It is designed to be fully responsive and provides insights into the work I have done as a web developer.
+Welcome to my personal portfolio website built using HTML, Tailwind CSS, and Vanta.js. It showcases my skills, experience, and projects with a clean and modern design.
 
-## Website Link
-Visit the live site here: [Aryan's Portfolio](https://aryanavportfolio.netlify.app/)
+🔗 **Live Demo**: [Visit Portfolio](https://aryanavportfolio.netlify.app)
 
-## Features
-- **Projects Section**: Displays key projects, including web apps and websites I have worked on.
-- **Skills Section**: Lists technologies and programming languages I specialize in.
-- **Contact Form**: A simple and functional form for visitors to get in touch with me.
-- **Responsive Design**: Fully responsive and accessible on all devices.
-- **Modern UI/UX**: Clean and elegant design with modern UI/UX practices.
+## 🚀 Features
+- Responsive design with Tailwind CSS
+- Animated Vanta.js background
+- Sections: Hero, About, Skills, Projects, Contact
+- Resume download/view option
+- Social media links with Font Awesome icons
 
-## Technologies Used
-- **Frontend**: HTML, CSS, JavaScript
-- **Libraries**: Bootstrap 5 for layout and responsiveness, AOS (Animate on Scroll) for smooth animations.
-- **Hosting**: Netlify for fast and secure deployment.
+## 🛠️ Technologies Used
+- HTML5
+- Tailwind CSS
+- JavaScript
+- Vanta.js & Three.js
+- Font Awesome
 
-## How to Use
-1. Clone the repository:
+## 📁 How to Run Locally
+1. Clone the repo:  
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/ARYAN1125/portfolio.git
